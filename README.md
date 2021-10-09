@@ -7,11 +7,12 @@ TMC2209 for X, Y and E
 TMC2208 frm X/Y to Z1/Z2  
 Second Hotend for cleaning/unclogging nozzles  
 2x 50x20 filament cooling fans  
+MKS-WiFi with ESP3D (Serial1)  
 
 Wiring:  
 TMC2209 UART TX -> PB2 (500Ohm)  
 BLTouch -> PE6   
-(BLTouch wired with shielded ethernet cable, prevent deploying probe while printing)
+(BLTouch wired with shielded ethernet cable, prevent deploying probe while printing)  
 
 ___________________________________________________
 
