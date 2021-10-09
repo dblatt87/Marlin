@@ -120,6 +120,9 @@
 #if ENABLED(Z_SAFE_HOMING)
 
   inline void home_z_safely() {
+    #if HAS_TRINAMIC_CONFIG   //Bl
+      restore_stepper_drivers();
+    #endif
     DEBUG_SECTION(log_G28, "home_z_safely", DEBUGGING(LEVELING));
 
     // Disallow Z homing if X or Y homing is needed
