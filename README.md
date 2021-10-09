@@ -10,7 +10,9 @@ Second Hotend for cleaning/unclogging nozzles
 
 Wiring:  
 TMC2209 UART TX -> PB2 (500Ohm)  
-BLTouch -> PE6  
+BLTouch -> PE6   
+(BLTouch wired with shielded ethernet cable, prevent deploying probe while printing)
+
 ___________________________________________________
 
 # Marlin 3D Printer Firmware
