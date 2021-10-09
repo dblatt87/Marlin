@@ -8,11 +8,14 @@ TMC2208 frm X/Y to Z1/Z2
 Second Hotend for cleaning/unclogging nozzles  
 2x 50x20 filament cooling fans  
 MKS-WiFi with ESP3D (Serial1)  
+ESP32CAM as WebCam  
 
 Wiring:  
 TMC2209 UART TX -> PB2 (500Ohm)  
 BLTouch -> PE6   
 (BLTouch wired with shielded ethernet cable, prevent deploying probe while printing)  
+
+There are still some issues, use at your own risk.
 
 ___________________________________________________
 
