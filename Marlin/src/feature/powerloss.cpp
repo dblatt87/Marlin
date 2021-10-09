@@ -480,7 +480,7 @@ void PrintJobRecovery::resume() {
   #endif
 
   // Restore the previously active tool (with no_move)
-  #if HAS_MULTI_EXTRUDER || HAS_MULTI_HOTEND
+  #if HAS_MULTI_EXTRUDER  // || HAS_MULTI_HOTEND
     sprintf_P(cmd, PSTR("T%i S"), info.active_extruder);
     gcode.process_subcommands_now(cmd);
   #endif
