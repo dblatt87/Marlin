@@ -1,12 +1,19 @@
 A fork for my Sapphire Plus from TwoTrees
 
+
 Hardware Changes:
+
 Orbiter Extruder
+
 TMC2209 for X, Y and E
+
 Second Hotend for cleaning/unclogging nozzles
 
+
 Wiring:
+
 TMC2209 UART TX -> PB2 (500Ohm)
+
 BLTouch -> PE6
 
 ___________________________________________________
