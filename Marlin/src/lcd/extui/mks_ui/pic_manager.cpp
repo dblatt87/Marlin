@@ -73,7 +73,7 @@ static const char assets[][LONG_FILENAME_LENGTH] = {
   "bmp_in.bin",
   "bmp_out.bin",
   "bmp_extru1.bin",
-  #if HAS_MULTI_EXTRUDER
+  #if HAS_MULTI_EXTRUDER || HAS_MULTI_HOTEND
     "bmp_extru2.bin",
   #endif
   "bmp_speed_high.bin",
@@ -124,7 +124,7 @@ static const char assets[][LONG_FILENAME_LENGTH] = {
   "bmp_resume.bin",
   "bmp_stop.bin",
   "bmp_ext1_state.bin",
-  #if HAS_MULTI_EXTRUDER
+  #if HAS_MULTI_EXTRUDER || HAS_MULTI_HOTEND
     "bmp_ext2_state.bin",
   #endif
   "bmp_bed_state.bin",
