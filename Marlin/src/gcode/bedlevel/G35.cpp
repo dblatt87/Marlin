@@ -129,7 +129,7 @@ void GcodeSuite::G35() {
 
     // Calculate adjusts
     if (ENABLED(REPORT_TRAMMING_ABS_DEGREES)){
-      SERIAL_ECHOPAIR("Z Offset: ", probe.offset.z, "mm, results should be slighly negativ (Orientation, looking from Top)");
+      SERIAL_ECHOPGM("Z Offset: ", probe.offset.z, "mm, results should be slighly negativ (Orientation, looking from Top)");
       SERIAL_EOL();
       LOOP_S_L_N(i, 0, G35_PROBE_COUNT) {
         const float diff = z_measured[i]*-1, 
@@ -137,8 +137,8 @@ void GcodeSuite::G35() {
 
         SERIAL_ECHOPGM("Turn ");
         SERIAL_ECHOPGM_P((char *)pgm_read_ptr(&tramming_point_name[i]));
-        SERIAL_ECHOPAIR(" ", (screw_thread & 1) == (adjust > 0) ? "CCW" : "CW", " by ", abs(adjust), " °");
-        if (ENABLED(REPORT_TRAMMING_MM)) SERIAL_ECHOPAIR(" (", -diff, "mm)");
+        SERIAL_ECHOPGM(" ", (screw_thread & 1) == (adjust > 0) ? "CCW" : "CW", " by ", abs(adjust), " °");
+        if (ENABLED(REPORT_TRAMMING_MM)) SERIAL_ECHOPGM(" (", -diff, "mm)");
         SERIAL_EOL();
       }
     }else{
@@ -152,9 +152,9 @@ void GcodeSuite::G35() {
 
         SERIAL_ECHOPGM("Turn ");
         SERIAL_ECHOPGM_P((char *)pgm_read_ptr(&tramming_point_name[i]));
-        SERIAL_ECHOPAIR(" ", (screw_thread & 1) == (adjust > 0) ? "CCW" : "CW", " by ", abs(full_turns), " turns");
-        if (minutes) SERIAL_ECHOPAIR(" and ", abs(minutes), " minutes");
-        if (ENABLED(REPORT_TRAMMING_MM)) SERIAL_ECHOPAIR(" (", -diff, "mm)");
+        SERIAL_ECHOPGM(" ", (screw_thread & 1) == (adjust > 0) ? "CCW" : "CW", " by ", abs(full_turns), " turns");
+        if (minutes) SERIAL_ECHOPGM(" and ", abs(minutes), " minutes");
+        if (ENABLED(REPORT_TRAMMING_MM)) SERIAL_ECHOPGM(" (", -diff, "mm)");
         SERIAL_EOL();
       }
     }
