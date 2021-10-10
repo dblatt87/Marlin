@@ -170,7 +170,7 @@ static void lv_kb_event_cb(lv_obj_t *kb, lv_event_t event) {
             queue.enqueue_one_now(ret_ta_txt);
           }
           lv_clear_keyboard();
-          // draw_return_ui is called in the end of message hook
+          draw_return_ui();   // draw_return_ui is not? called in the end of message hook
           break;
         default: break;
       }
