@@ -15,7 +15,7 @@ TMC2209 UART TX -> PB2 (500Ohm)
 BLTouch -> PE6   
 (BLTouch wired with shielded ethernet cable, prevent deploying probe while printing)  
 
-There are still some issues, use at your own risk.
+There are major issues with layer shifts @2.0.9.2, Version 2.0.8 seem to work properly
 
 ___________________________________________________
 
