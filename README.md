@@ -4,7 +4,7 @@ Hardware Changes:
 Orbiter Extruder  
 RedLizzard Hotend  
 TMC2209 for X, Y and E  
-TMC2208 frm X/Y to Z1/Z2  
+TMC2208 from X/Y to Z1/Z2  
 Second Hotend for cleaning/unclogging nozzles  
 2x 50x20 filament cooling fans  
 MKS-WiFi with ESP3D (Serial1)  
