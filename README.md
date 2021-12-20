@@ -1,3 +1,24 @@
+A fork for my Sapphire Plus from TwoTrees  
+
+Hardware Changes:  
+Orbiter Extruder  
+RedLizzard Hotend  
+TMC2209 for X, Y and E  
+TMC2208 frm X/Y to Z1/Z2  
+Second Hotend for cleaning/unclogging nozzles  
+2x 50x20 filament cooling fans  
+MKS-WiFi with ESP3D (Serial1)  
+ESP32CAM as WebCam  
+
+Wiring:  
+TMC2209 UART TX -> PB2 (500Ohm)  
+BLTouch -> PE6   
+(BLTouch wired with shielded ethernet cable, prevent deploying probe while printing)  
+
+There are major issues with layer shifts @2.0.9.2, Version 2.0.8 seem to work properly.
+
+___________________________________________________
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
