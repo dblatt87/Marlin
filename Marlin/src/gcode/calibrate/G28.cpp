@@ -119,6 +119,9 @@
 #if ENABLED(Z_SAFE_HOMING)
 
   inline void home_z_safely() {
+    #if HAS_TRINAMIC_CONFIG       //just make sure drivers are initialized proberly. 
+      restore_stepper_drivers();  //avoids crashes due to missunderstanding address bits as micro steps
+    #endif
     DEBUG_SECTION(log_G28, "home_z_safely", DEBUGGING(LEVELING));
 
     // Disallow Z homing if X or Y homing is needed
